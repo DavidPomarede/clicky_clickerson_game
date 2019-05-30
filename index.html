@@ -7,24 +7,69 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CrystalsCollector</title>
 
-    <title>Hello, world!</title>
-    <style type="text/css">
-
-        .crystal-image {
-          width: 150px;
-          height: 150px;
-        }
-      </style>
   </head>
   <body>
-    <h1>Number to Match: <span id="number-to-guess"></span></h1>
 
-    <div id="wins">Wins: 0</div>
-    <div id="losses">Losses: 0</div>
-    <div id="yourTotal"></div>
-    <div id="crystals">
-    </div>
+        <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-6 titleClass">
+                        <h1>CrystalsCollector!</h1>
+                  </div>
+
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-6 introClass">
+
+                                    You will be given a random number at the start of the game.
+                                    <br>
+                                    There are four crystals below. By clicking on a crytal you will add a specific amount of points to your total score.
+                                    <br>
+                                    You win the game by mathcing your total score to a random number, you lost the game if your total score goes above the randome number.
+                                    <br>
+                                    The value of each crystal is hidden from you until you click on it.
+                                    <br>
+                                    Each time when the game starts, the game iwll change the value of each crystal.  
+
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-2" id="numberGuess">
+                            <h1><span id="number-to-guess"></span></h1>
+                    </div>
+                    <div class="col-2" id="winsLosses">
+                            <div id="wins">Wins: 0</div>
+                            <div id="losses">Losses: 0</div>
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                        <div class="col-8" id="crystalRow">
+                                <div id="crystals"></div>
+                        </div>
+ 
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-4 footerClass">
+                        Your total:
+                    </div>
+                    </div>
+                <div class="row justify-content-start">
+                    <div class="col-4 footerClass">
+                            <h1><div id="yourTotal"></div></h1>
+                    </div>
+                </div>
+
+        </div>
+
+
+
+
+
+
+
+
 
  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,0 +1,43 @@
+body {
+    background-image: url(../images/diamonds.png);
+}
+
+.crystal-image {
+  width: 150px;
+  height: 150px;
+}
+
+.titleClass {
+    background-color: orange;
+    color: white;
+}
+
+.introClass {
+    background-color: tan;
+    color: green;
+}
+
+#numberGuess {
+    background-color: green;
+}
+
+#winsLosses {
+    background-color: aquamarine;
+}
+
+.footerClass {
+    background-color: green;
+    color: white;
+}
+
+div {
+    padding: 0.3rem;
+}
+
+#crystalRow {
+    padding-left: 0rem;
+}
+
+#crystals {
+    padding-left: 0rem;
+}
