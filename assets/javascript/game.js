@@ -64,6 +64,7 @@ $("#yourTotal").text(counter);
 if (counter === targetNumber) {
   wins++;
   $("#wins").text("Wins: " + wins);
+  $("#yourTotal").text(0);
   counter = 0;
   randomizer();
 }
@@ -71,6 +72,7 @@ if (counter === targetNumber) {
 else if (counter >= targetNumber) {
   losses++;
   $("#losses").text("Losses: " + losses);
+  $("#yourTotal").text(0);
   counter = 0;
   randomizer();
 }
