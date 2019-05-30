@@ -26,6 +26,8 @@ var imageCrystal2 = $("<img>");
 var imageCrystal3 = $("<img>");
 var imageCrystal4 = $("<img>");
 
+//I tried to make the following less wordy with a function, but couldn't figure out how to do it.
+
 imageCrystal1.attr("src", "./assets/images/c1.jpg");
 imageCrystal1.addClass("crystal-image");
 imageCrystal1.attr("data-crystalvalue", crystalNumber1);
