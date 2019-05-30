@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>simple crystal game</title>
+
+  <style type="text/css">
+
+    .crystal-image {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+
+
+  <div id="crystals">
+  </div>
+  <div id="wins"></div>
+  <div id="losses"></div>
+  <div id="yourTotal"></div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+    var counter = 0;
+    var targetNumber =  Math.floor(Math.random() * 100 + 1);
+    
+    var crystalNumber1 =  Math.floor(Math.random() * 20 + 1);
+    var crystalNumber2 =  Math.floor(Math.random() * 20 + 1);
+    var crystalNumber3 =  Math.floor(Math.random() * 20 + 1);
+    var crystalNumber4 =  Math.floor(Math.random() * 20 + 1);
+
+  $("#number-to-guess").text(targetNumber);
+
+var imageCrystal1 = $("<img>");
+var imageCrystal2 = $("<img>");
+var imageCrystal3 = $("<img>");
+var imageCrystal4 = $("<img>");
+
+    imageCrystal1.attr("src", "./assets/images/c1.jpg");
+    imageCrystal1.addClass("crystal-image");
+    imageCrystal1.attr("data-crystalvalue", crystalNumber1);
+    $("#crystals").append(imageCrystal1);
+    imageCrystal2.attr("src", "./assets/images/c2.jpg");
+    imageCrystal2.addClass("crystal-image");
+    imageCrystal1.attr("data-crystalvalue", crystalNumber1);
+    $("#crystals").append(imageCrystal2);
+    imageCrystal3.attr("src", "./assets/images/c3.jpg");
+    imageCrystal3.addClass("crystal-image");
+    imageCrystal1.attr("data-crystalvalue", crystalNumber1);
+    $("#crystals").append(imageCrystal3);
+    imageCrystal4.attr("src", "./assets/images/c4.jpg");
+    imageCrystal4.addClass("crystal-image");
+    imageCrystal1.attr("data-crystalvalue", crystalNumber1);
+    $("#crystals").append(imageCrystal4);
+
+
+
+
+
+  $(".crystal-image").on("click", function() {
+
+
+    var crystalValue = ($(this).attr("data-crystalvalue"));
+    crystalValue = parseInt(crystalValue);
+
+    counter += crystalValue;
+    $("#yourTotal").text(counter);
+
+
+
+    if (counter === targetNumber) {
+      alert("You win!");
+    }
+
+    else if (counter >= targetNumber) {
+      alert("You lose!!");
+    }
+
+  });
+
+  </script>
+</body>
+</html>
