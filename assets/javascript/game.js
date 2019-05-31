@@ -6,6 +6,10 @@ var crystalNumber1 =  0;
 var crystalNumber2 =  0;
 var crystalNumber3 =  0;
 var crystalNumber4 =  0;
+var imageCrystal1 = $("<img>");
+var imageCrystal2 = $("<img>");
+var imageCrystal3 = $("<img>");
+var imageCrystal4 = $("<img>");
 
 var randomizer = function() {
     targetNumber =  Math.floor(Math.random() * 100 + 1);
@@ -14,17 +18,27 @@ var randomizer = function() {
     crystalNumber2 =  Math.floor(Math.random() * 15 + 1);
     crystalNumber3 =  Math.floor(Math.random() * 15 + 1);
     crystalNumber4 =  Math.floor(Math.random() * 15 + 1);
+    imageCrystal1.attr("data-crystalvalue", crystalNumber1);
+    imageCrystal2.attr("data-crystalvalue", crystalNumber2);
+    imageCrystal3.attr("data-crystalvalue", crystalNumber3);
+    imageCrystal4.attr("data-crystalvalue", crystalNumber4);
     $("#number-to-guess").text(targetNumber);
+    return;
 };
+
+// var randomizeCrystals = function() {
+//   crystalNumber1 =  Math.floor(Math.random() * 15 + 1);
+//   crystalNumber2 =  Math.floor(Math.random() * 15 + 1);
+//   crystalNumber3 =  Math.floor(Math.random() * 15 + 1);
+//   crystalNumber4 =  Math.floor(Math.random() * 15 + 1);
+//   return crystalNumber1,crystalNumber2,crystalNumber3,crystalNumber4;
+// }
 
 randomizer();
 
 $("#number-to-guess").text(targetNumber);
 
-var imageCrystal1 = $("<img>");
-var imageCrystal2 = $("<img>");
-var imageCrystal3 = $("<img>");
-var imageCrystal4 = $("<img>");
+
 
 //I tried to make the following less wordy with a function, but couldn't figure out how to do it.
 
