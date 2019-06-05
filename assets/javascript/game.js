@@ -12,12 +12,12 @@ var imageCrystal3 = $("<img>");
 var imageCrystal4 = $("<img>");
 
 var randomizer = function() {
-    targetNumber =  Math.floor(Math.random() * 100 + 1);
+    targetNumber =  Math.floor(Math.random() * 86 + 15);
 
-    crystalNumber1 =  Math.floor(Math.random() * 15 + 1);
-    crystalNumber2 =  Math.floor(Math.random() * 15 + 1);
-    crystalNumber3 =  Math.floor(Math.random() * 15 + 1);
-    crystalNumber4 =  Math.floor(Math.random() * 15 + 1);
+    crystalNumber1 =  Math.floor(Math.random() * 13 + 1);
+    crystalNumber2 =  Math.floor(Math.random() * 13 + 1);
+    crystalNumber3 =  Math.floor(Math.random() * 13 + 1);
+    crystalNumber4 =  Math.floor(Math.random() * 13 + 1);
     imageCrystal1.attr("data-crystalvalue", crystalNumber1);
     imageCrystal2.attr("data-crystalvalue", crystalNumber2);
     imageCrystal3.attr("data-crystalvalue", crystalNumber3);
@@ -26,13 +26,6 @@ var randomizer = function() {
     return;
 };
 
-// var randomizeCrystals = function() {
-//   crystalNumber1 =  Math.floor(Math.random() * 15 + 1);
-//   crystalNumber2 =  Math.floor(Math.random() * 15 + 1);
-//   crystalNumber3 =  Math.floor(Math.random() * 15 + 1);
-//   crystalNumber4 =  Math.floor(Math.random() * 15 + 1);
-//   return crystalNumber1,crystalNumber2,crystalNumber3,crystalNumber4;
-// }
 
 randomizer();
 
